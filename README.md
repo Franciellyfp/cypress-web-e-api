@@ -1,6 +1,6 @@
 ## Testes de Frony com Cypress
 
-Projeto simples para demonstrar testes de frontend com [Cypress](https://cypress.io)
+Projeto simples para demonstrar testes de frontend e backend com [Cypress](https://cypress.io)
 
 ## Requisitos
 
