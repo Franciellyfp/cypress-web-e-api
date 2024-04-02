@@ -1,0 +1,44 @@
+Funcionalidade: Registro
+  Como um usuário
+  Eu quero ser capaz de criar um novo registro
+  Para que eu possa acessar a aplicação
+
+Cenário: Criar um registro com sucesso
+  Dado que estou na página de "Registro"
+  Quando preencho todos os campos obrigatórios corretamente
+  E clico no botão "Registrar"
+  Então devo ver uma mensagem de confirmação informando que o registro foi criado com sucesso
+
+Cenário: Validar data selecionada com sucesso
+  Dado que estou na tela de "Registro"
+  Quando seleciono uma data válida no campo de data
+  E clico no botão "Verificar"
+  Então devo ver se a data selecionada corresponde ao input informando
+  E nenhuma mensagem de erro deve ser exibida
+
+ Cenário: Verificar mensagem de erro ao não preencher campo obrigatório
+    Dado que estou na página de registro
+    Quando eu tento registrar um usuário sem preencher o campo "First name"
+    Então devo ver a mensagem "First name is required." abaixo do campo "First name"
+
+    Quando eu tento registrar um usuário sem preencher o campo "Last name"
+    Então devo ver a mensagem "Last name is required." abaixo do campo "Last name"
+
+    Quando eu tento registrar um usuário sem preencher o campo "Email"
+    Então devo ver a mensagem "Email is required." abaixo do campo "Email"
+
+    Quando eu tento registrar um usuário sem preencher o campo "Password"
+    Então devo ver a mensagem "Password is required." abaixo do campo "Password"
+
+    Quando eu tento registrar um usuário sem preencher o campo "Confirm Password"
+    Então devo ver a mensagem "Password is required." abaixo do campo "Confirm Password"
+
+Cenário: Verificar mensagem de erro ao  preencher campo obrigatório email com valor inválido
+    Dado que estou na página de registro
+    Quando eu tento registrar um usuário preenchendo o campo "Email" com valor inválido
+    Então devo ver a mensagem "Wrong email." abaixo do campo "Email"
+
+Cenário: Verificar mensagem de erro ao  preencher campo obrigatório Password com valor inválido
+    Dado que estou na página de registro
+    Quando eu tento registrar um usuário preenchendo o campo "Password" com valor inválido
+    Então devo ver a mensagem "Password must meet the following rules: must have at least 6 characters" abaixo do campo "Password"
