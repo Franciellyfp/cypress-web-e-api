@@ -6,7 +6,7 @@ describe('Testes de chamadas HTTP', () => {
 
   let userId = ''
 
-  it('Cadastrar de usuário', () => {
+  it('Cadastrar um usuário', () => {
     const nome = faker.name.findName()
     const email = faker.internet.email()
 
